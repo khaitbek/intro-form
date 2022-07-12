@@ -132,6 +132,7 @@ body {
 .form-input {
     position: relative;
     width: 100%;
+    margin-bottom: 4px;
     padding-bottom: 14px;
     font-weight: 600;
     font-size: 18px;
@@ -151,14 +152,35 @@ body {
     border-width: 2px;
     border-color: #000;
 }
-.form-input[type="email"]:not(:placeholder-shown):invalid
+
+
+/* .form-input[type="email"]:not(:placeholder-shown):invalid
 {
     color: #f03535;
     border-color: #f03535;
 }
 .form-input[type="email"]:not(:placeholder-shown):invalid .email-label{
     background: #000;
+} */
+
+
+.input-span{
+    display: none;
+    font-size: 12px;
+    text-align: right;
+    color: #f03535;
 }
+.form-input:not(:placeholder-shown):invalid:not(:focus){
+    color: #f03535;
+    border-color: #f03535;
+}
+.form-input:not(:placeholder-shown):invalid:not(:focus) ~ .input-span{
+    display: block;
+}
+
+
+
+
 .submit-btn {
     margin-bottom: 8px;
     padding: 20px 0;

@@ -28,16 +28,20 @@
                     <form class="intro-form" action="https://echo.htmlacademy.ru/courses" autocomplete="off">
                         <h2 class="form-title">Sign up for the course and <br> get free 7 days</h2>
                         <label class="label firstname-label">
-                            <input  class="form-input" type="text" name="first_name" aria-label="Enter your first name" placeholder="First Name" required>
+                            <input  class="form-input" type="text" name="first_name" minlength="3" aria-label="Enter your first name" placeholder="First Name" required>
+                            <span class="input-span">Please make sure that your name has at least 3 characters</span>
                         </label>
                         <label class="label lastname-label">
-                            <input  class="form-input" type="text" name="last_name" aria-label="Enter your last name" placeholder="Last Name" required>
+                            <input  class="form-input" type="text" name="last_name" aria-label="Enter your last name" minlength="3" placeholder="Last Name" required>
+                            <span class="input-span">Please make sure that your last name has at lest 3 characters</span>
                         </label>
                         <label class="label email-label">
                             <input  class="form-input" type="email" name="email" aria-label="Enter your email adress" placeholder="Email Adress" required>
+                            <span class="input-span">Please enter a valid email address</span>
                         </label>
                         <label class="label password-label">
-                            <input  class="form-input" type="password" name="password" aria-label="Enter your password" placeholder="Password" required>
+                            <input  class="form-input" type="password" name="password" minlength="8" aria-label="Enter your password" placeholder="Password" required>
+                            <span class="input-span">Please make sure that your password consists of 8 characters</span>
                         </label>
                         <!-- ATTENTION
                             Bu yerda label ishlatilinganidan ko'zlangan maqsad shuki, maketga qaralsa form submit qilinganda qaysidir input invalid bo'sa inputni tagida kichkina matn chiqib turibti, masalan email inputga email kiritilmagan bo'lsa input emailni tagida looks like this is not an email ya'ni bu emailga o'xshamayapti degan yozuv bor. Label ishlatilishdan maqsad ham shu. Keyinchalik javascript orqali amalga oshiriladi
